@@ -4,24 +4,33 @@
 
 Inspired by [infinite_listview](https://github.com/fluttercommunity/flutter_infinite_listview).
 
-<img src="demo.gif" width="250" />
 
-## Example:
+# Example
+
+![Example](https://github.com/mkalmousli/flutter_infinite_pageview/raw/main/example.gif)
+
+
+## Usage:
 
 ```dart
 InfinitePageView(
     itemBuilder: (context, index) => Container(
         color: Colors.blue,
         child: Center(
-        child: Text(
-            style: TextStyle(fontSize: 30, color: Colors.white),
-            index.toString(),
+            child: Text(
+                style: TextStyle(
+                    fontSize: 30,
+                    color: Colors.white
+                ),
+                index.toString(),
+            ),
         ),
-    ),
+    )
 )
 ```
 
 # Run the example:
+
 ```bash
 cd example
 flutter run
