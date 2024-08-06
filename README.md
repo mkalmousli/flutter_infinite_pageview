@@ -21,3 +21,10 @@ InfinitePageView(
 )
 ```
 
+# Run the example:
+```bash
+cd example
+flutter run
+```
+
+
