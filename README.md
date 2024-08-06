@@ -5,14 +5,22 @@
 Inspired by [infinite_listview](https://github.com/fluttercommunity/flutter_infinite_listview).
 
 
-# Example
+## Example
 
 ![Example](https://github.com/mkalmousli/flutter_infinite_pageview/raw/main/example.gif)
+
+```bash
+cd example
+flutter run example/main.dart
+```
+
 
 
 ## Usage:
 
 ```dart
+import 'package:infinite_pageview/infinite_pageview.dart';
+
 InfinitePageView(
     itemBuilder: (context, index) => Container(
         color: Colors.blue,
@@ -28,12 +36,3 @@ InfinitePageView(
     )
 )
 ```
-
-# Run the example:
-
-```bash
-cd example
-flutter run
-```
-
-
