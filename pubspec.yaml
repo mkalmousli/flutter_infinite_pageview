@@ -1,7 +1,7 @@
 name: infinite_pageview
 description: "PageView but its infinite and can go left to the negatives!"
 version: 0.0.1
-homepage:
+homepage: https://github.com/mkalmousli/flutter_infinite_pageview
 
 environment:
   sdk: '>=2.17.0 <4.0.0'
