@@ -17,7 +17,7 @@ class ExampleApp extends StatelessWidget {
         ),
         body: SafeArea(
           child: InfinitePageView(
-            scrollDirection: Axis.vertical,
+            scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) => Container(
               color: Colors.blue,
               child: Center(
