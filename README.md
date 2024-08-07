@@ -1,5 +1,7 @@
 # infinite_pageview
 
+![pub.dev](https://img.shields.io/pub/v/infinite_pageview.svg)
+
 [PageView](https://api.flutter.dev/flutter/widgets/PageView-class.html) but its infinite and can go left to the negatives!
 
 Inspired by [infinite_listview](https://github.com/fluttercommunity/flutter_infinite_listview).
