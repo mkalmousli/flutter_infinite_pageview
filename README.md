@@ -11,9 +11,8 @@ Inspired by [infinite_listview](https://github.com/fluttercommunity/flutter_infi
 
 ```bash
 cd example
-flutter run example/main.dart
+flutter run lib/main.dart
 ```
-
 
 
 ## Usage:
