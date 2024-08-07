@@ -1,7 +1,7 @@
 part of 'infinite_pageview.dart';
 
 class _InfinitePageViewState extends State<InfinitePageView> {
-  int _lastReportedPage = 0;
+  double _lastReportedPage = 0;
 
   late InfiniteScrollController _controller;
 
@@ -54,13 +54,18 @@ class _InfinitePageViewState extends State<InfinitePageView> {
       onNotification: (ScrollNotification notification) {
         if (widget.onPageChanged != null &&
             notification is ScrollUpdateNotification) {
-          final PageMetrics metrics = notification.metrics as PageMetrics;
-          final int currentPage = metrics.page!.round();
-          if (currentPage != _lastReportedPage) {
-            _lastReportedPage = currentPage;
-            widget.onPageChanged!(currentPage);
+          final m = notification.metrics;
+
+          final page =
+              clampDouble(m.pixels, m.minScrollExtent, m.maxScrollExtent) /
+                  math.max(1.0, m.viewportDimension * widget.viewportFraction);
+
+          if (page != _lastReportedPage) {
+            widget.onPageChanged?.call(page);
+            _lastReportedPage = page;
           }
         }
+
         return false;
       },
       child: _buildScrollable(),

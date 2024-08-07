@@ -17,6 +17,7 @@ class ExampleApp extends StatelessWidget {
         ),
         body: SafeArea(
           child: InfinitePageView(
+            scrollDirection: Axis.vertical,
             itemBuilder: (context, index) => Container(
               color: Colors.blue,
               child: Center(
@@ -27,6 +28,7 @@ class ExampleApp extends StatelessWidget {
               ),
             ),
             pageSnapping: true,
+            onPageChanged: print,
           ),
         ),
       ),

@@ -4,15 +4,11 @@ part of 'infinite_pageview.dart';
 class InfiniteScrollController extends ScrollController {
   /// Creates a new [InfiniteScrollController]
   InfiniteScrollController({
-    double initialScrollOffset = 0.0,
-    bool keepScrollOffset = true,
-    String? debugLabel,
+    super.initialScrollOffset = 0.0,
+    super.keepScrollOffset = true,
+    super.debugLabel,
     this.viewportFraction = 1.0,
-  }) : super(
-          initialScrollOffset: initialScrollOffset,
-          keepScrollOffset: keepScrollOffset,
-          debugLabel: debugLabel,
-        );
+  });
 
   final double viewportFraction;
 

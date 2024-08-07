@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -29,6 +31,7 @@ class InfinitePageView extends StatefulWidget {
     this.addAutomaticKeepAlives = true,
     this.addRepaintBoundaries = true,
     this.addSemanticIndexes = true,
+    this.viewportFraction = 1,
   });
 
   /// See [PageView.allowImplicitScrolling]
@@ -50,7 +53,7 @@ class InfinitePageView extends StatefulWidget {
   final bool pageSnapping;
 
   /// See: [PageView.onPageChanged]
-  final ValueChanged<int>? onPageChanged;
+  final ValueChanged<double>? onPageChanged;
 
   /// See: [PageView.dragStartBehavior]
   final DragStartBehavior dragStartBehavior;
@@ -78,6 +81,9 @@ class InfinitePageView extends StatefulWidget {
 
   /// See: [SliverChildBuilderDelegate.addSemanticIndexes]
   final bool addSemanticIndexes;
+
+  /// See: [_PagePosition.viewportFraction] in [PageView].
+  final double viewportFraction;
 
   @override
   State<InfinitePageView> createState() => _InfinitePageViewState();
